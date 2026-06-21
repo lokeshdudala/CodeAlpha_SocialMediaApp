@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="navbar">
+
+        <h2>SocialHub</h2>
+
+        <div>
+            <a href="feed.html">Feed</a>
+            <a href="users.html">Users</a>
+            <a href="profile.html">Profile</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+
+    </div>
+
+    <div class="profile-page">
+
+        <div id="profile-container"></div>
+
+        <form id="editProfileForm" class="edit-form">
+
+            <h3>✏️ Edit Profile</h3>
+
+            <input
+                type="text"
+                id="editName"
+                placeholder="Enter Name"
+                required
+            >
+
+            <textarea
+                id="editBio"
+                placeholder="Enter Bio"
+                required
+            ></textarea>
+
+            <input
+                type="text"
+                id="editProfilePic"
+                placeholder="Enter Profile Image URL"
+            >
+
+            <button type="submit">
+                Save Changes
+            </button>
+
+        </form>
+
+        <h2 class="section-title">
+            📷 My Posts
+        </h2>
+
+        <div id="my-posts"></div>
+
+    </div>
+
+    <script src="js/logout.js"></script>
+    <script src="js/profile.js"></script>
+
+</body>
+</html>

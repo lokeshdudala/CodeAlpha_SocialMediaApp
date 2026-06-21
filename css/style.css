@@ -1,0 +1,336 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+/* Navbar */
+
+.navbar{
+    background:linear-gradient(
+        90deg,
+        #4f46e5,
+        #ec4899
+    );
+
+    padding:15px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    color:white;
+
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+    font-weight:600;
+}
+
+.navbar a:hover{
+    opacity:.8;
+}
+
+/* Forms */
+
+form{
+    background:white;
+
+    max-width:450px;
+
+    margin:40px auto;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+}
+
+form h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input,
+textarea{
+    width:100%;
+
+    padding:12px;
+
+    margin:10px 0;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#4f46e5;
+}
+
+button{
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #4f46e5,
+        #ec4899
+    );
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+/* Profile */
+
+.profile-page{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.profile-card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+}
+
+.profile-pic{
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #ec4899;
+}
+
+.profile-email{
+    color:gray;
+    margin-top:5px;
+}
+
+.profile-bio{
+    margin-top:15px;
+    font-size:15px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+
+    margin-top:20px;
+}
+
+.stats h3{
+    color:#4f46e5;
+}
+
+.edit-form{
+    background:white;
+
+    margin-top:25px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+}
+
+/* Feed */
+
+.post-card{
+    background:white;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    max-width:700px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.post-card:hover{
+    transform:translateY(-3px);
+}
+
+.post-card h3{
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+/* Users */
+
+.user-card{
+    background:white;
+
+    padding:20px;
+
+    margin:15px auto;
+
+    max-width:600px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+}
+
+/* Back Link */
+
+.back-btn{
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    text-decoration:none;
+
+    color:#4f46e5;
+
+    font-weight:bold;
+}
+
+/* Titles */
+
+.section-title{
+    margin:30px 0 15px;
+    color:#4f46e5;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .stats{
+        gap:20px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    form{
+        margin:20px;
+    }
+
+    .profile-card,
+    .post-card,
+    .user-card{
+        margin:15px;
+    }
+}
+.auth-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #4f46e5,
+        #ec4899
+    );
+}
+
+.auth-card{
+    width:420px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+.auth-card h1{
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+.auth-card h2{
+    color:#64748b;
+    margin-bottom:20px;
+}
+
+.auth-card form{
+    margin:0;
+    padding:0;
+    box-shadow:none;
+    background:none;
+    max-width:100%;
+}
+
+.auth-link{
+    margin-top:20px;
+}
+
+.auth-link a{
+    color:#4f46e5;
+    text-decoration:none;
+    font-weight:bold;
+}
+.auth-card{
+    animation: fadeIn .5s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
