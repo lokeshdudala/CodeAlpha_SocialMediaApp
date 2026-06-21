@@ -32,20 +32,37 @@ async function loadUsers() {
             }
 
             container.innerHTML += `
-               <div class="user-card">
 
-                    <h3>
-                        ${user.name}
-                    </h3>
+                <div class="user-card">
 
-                    <p>
-                        ${user.email}
-                    </p>
+                    <div class="user-info">
 
-                    <p>
-                        Followers:
-                        ${user.followers.length}
-                    </p>
+                        <img
+                            src="${
+                                user.profilePic ||
+                                'https://cdn-icons-png.flaticon.com/512/149/149071.png'
+                            }"
+                            class="user-avatar"
+                        >
+
+                        <div>
+
+                            <h3>
+                                ${user.name}
+                            </h3>
+
+                            <p>
+                                ${user.email}
+                            </p>
+
+                            <p>
+                                👥 Followers:
+                                ${user.followers.length}
+                            </p>
+
+                        </div>
+
+                    </div>
 
                     <button
                         onclick="followUser('${user._id}')">
@@ -53,6 +70,7 @@ async function loadUsers() {
                     </button>
 
                 </div>
+
             `;
         });
 

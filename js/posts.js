@@ -27,47 +27,62 @@ async function loadPosts() {
             container.innerHTML += `
                 <div class="post-card">
 
-                    <h3>
-                        ${post.user.name}
-                    </h3>
+                    <div class="post-header">
 
-                    <p>
+                        <img
+                            src="${
+                                post.user.profilePic ||
+                                'https://cdn-icons-png.flaticon.com/512/149/149071.png'
+                            }"
+                            class="post-avatar"
+                        >
+
+                        <div>
+                            <h3>
+                                ${post.user.name}
+                            </h3>
+
+                            <small>
+                                ${new Date(
+                                    post.createdAt
+                                ).toLocaleString()}
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <p class="post-content">
                         ${post.content}
                     </p>
 
-                    <p>
-                        ❤️ ${post.likes.length} Likes
-                    </p>
+                    <div class="post-actions">
 
-                    <button
-                        onclick="likePost('${post._id}')">
-                          ❤️
-                    </button>
+                        <button
+                            onclick="likePost('${post._id}')">
+                            ❤️ ${post.likes.length}
+                        </button>
 
-                    <br><br>
-
-                    <input
-                        type="text"
-                        id="comment-${post._id}"
-                        placeholder="Write a comment..."
-                    >
-
-                    <button
-                        onclick="addComment('${post._id}')">
-                        Comment
-                    </button>
-
-                    <div
-                        id="comments-${post._id}">
                     </div>
 
-                    <br>
+                    <div class="comment-section">
 
-                    <small>
-                        ${new Date(
-                            post.createdAt
-                        ).toLocaleString()}
-                    </small>
+                        <input
+                            type="text"
+                            id="comment-${post._id}"
+                            placeholder="Write a comment..."
+                        >
+
+                        <button
+                            onclick="addComment('${post._id}')">
+                            💬 Comment
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="comments-${post._id}"
+                        class="comments-box">
+                    </div>
 
                 </div>
             `;
@@ -75,7 +90,6 @@ async function loadPosts() {
             setTimeout(() => {
                 loadComments(post._id);
             }, 100);
-
         });
 
     } catch (error) {
@@ -230,10 +244,10 @@ async function loadComments(postId) {
         comments.forEach(comment => {
 
             container.innerHTML += `
-                <p>
-                    <b>${comment.user.name}</b> :
+                <div class="comment-item">
+                    <b>${comment.user.name}</b>
                     ${comment.text}
-                </p>
+                </div>
             `;
         });
 
