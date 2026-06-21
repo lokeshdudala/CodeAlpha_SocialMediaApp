@@ -334,3 +334,59 @@ button:hover{
         transform:translateY(0);
     }
 }
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    color:#4f46e5;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.secondary-btn{
+    background:#64748b;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    padding:40px;
+}
+
+.feature-card{
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    color:gray;
+}
