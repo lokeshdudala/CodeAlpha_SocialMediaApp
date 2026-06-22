@@ -6,10 +6,10 @@ const userId =
     localStorage.getItem("userId");
 
 const POSTS_API =
-    "http://localhost:5000/api/posts";
+    "https://socialhub-backend-3mdp.onrender.com/api/posts";
 
 const USER_API =
-    "http://localhost:5000/api/auth";
+    "https://socialhub-backend-3mdp.onrender.com/api/auth";
 
 async function loadProfile() {
 

@@ -6,7 +6,7 @@ const currentUserId =
     localStorage.getItem("userId");
 
 const API_URL =
-    "http://localhost:5000/api/auth/users";
+    "https://socialhub-backend-3mdp.onrender.com/api/auth/users";
 
 async function loadUsers() {
 
@@ -86,7 +86,7 @@ async function followUser(targetUserId) {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/auth/follow",
+                "https://socialhub-backend-3mdp.onrender.com/api/auth/follow",
                 {
                     method: "POST",
 

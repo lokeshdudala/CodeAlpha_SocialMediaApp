@@ -3,7 +3,7 @@ if (!localStorage.getItem("token")) {
 }
 
 const API_URL =
-"http://localhost:5000/api/posts";
+"https://socialhub-backend-3mdp.onrender.com/api/posts";
 
 async function loadPosts() {
 
@@ -155,7 +155,7 @@ async function likePost(postId) {
         localStorage.getItem("userId");
 
     await fetch(
-        "http://localhost:5000/api/posts/like",
+        "https://socialhub-backend-3mdp.onrender.com/api/posts/like",
         {
             method: "POST",
 
@@ -191,7 +191,7 @@ async function addComment(postId) {
 
     const response =
         await fetch(
-            "http://localhost:5000/api/comments",
+            "https://socialhub-backend-3mdp.onrender.com/api/comments",
             {
                 method: "POST",
 
@@ -226,7 +226,7 @@ async function loadComments(postId) {
 
         const response =
             await fetch(
-                `http://localhost:5000/api/comments/${postId}`
+                `https://socialhub-backend-3mdp.onrender.com/api/comments/${postId}`
             );
 
         const comments =

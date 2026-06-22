@@ -1,5 +1,5 @@
 const API_URL =
-"http://localhost:5000/api/auth";
+"https://socialhub-backend-3mdp.onrender.com/api/auth";
 
 // Register
 
@@ -27,7 +27,7 @@ if(registerForm){
 
                 const response =
                 await fetch(
-                    "http://localhost:5000/api/auth/register",
+                    "https://socialhub-backend-3mdp.onrender.com/api/auth/register",
                     {
                         method:"POST",
 
@@ -88,7 +88,7 @@ if(loginForm){
 
                 const response =
                 await fetch(
-                    "http://localhost:5000/api/auth/login",
+                    "https://socialhub-backend-3mdp.onrender.com/api/auth/login",
                     {
                         method:"POST",
 
